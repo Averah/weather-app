@@ -1,0 +1,39 @@
+.App-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(203,226,222);
+background: linear-gradient(90deg, rgba(203,226,222,1) 0%, rgba(154,166,222,1) 41%, rgba(118,213,205,1) 97%, rgba(113,196,185,1) 100%);
+}
+
+.content {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  border: 4px solid rgba(255 255 255 / 13%);
+  border-radius: 5%;
+  background: #f0f0f02e;
+  -webkit-box-shadow: 1px 1px 8px 5px rgba(97, 144, 179, 0.2);
+-moz-box-shadow: 1px 1px 8px 5px rgba(97, 144, 179, 0.2);
+box-shadow: 1px 1px 8px 5px rgba(97, 144, 179, 0.2);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #446269a8
+
+}
+.footer img {
+  max-height: 70px;
+  padding-right: 15px;
+}

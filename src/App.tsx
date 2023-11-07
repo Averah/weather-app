@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import ghLogo from './assets/icons/footer/icons8-github-100.svg'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="App-layout">
+      <div className='content'>Content</div>
+      <div className='footer'>
+        <a href="https://github.com/Averah" target="_blank">
+          <img className='gh-logo' src={ghLogo} alt='' />
         </a>
-      </header>
+      </div>
     </div>
   );
 }
