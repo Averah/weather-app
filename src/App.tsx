@@ -1,7 +1,8 @@
 import './App.scss';
 import ghLogo from './assets/icons/footer/icons8-github-100.svg'
-import SearchBar from './SearchBar/SearchBar';
-import { WeatherLogo } from './WeatherLogo/WeatherLogo';
+import SearchBar from './Components/SearchBar/SearchBar';
+import { WeatherLogo } from './Components/WeatherLogo/WeatherLogo';
+
 
 function App() {
 
