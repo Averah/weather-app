@@ -14,10 +14,8 @@ const SearchBar: React.FC = () => {
 
     const onSearch = async () => {
         const response = await getForecast(value)
-        console.log(response);
         dispatch(locationActions.setLocation(response.location))
-        dispatch(currentWeatherActions.setCurrentWeather(response.current))
-        console.log(response.forecast);
+        dispatch(currentWeatherActions.setCurrentWeather(response.current));
         dispatch(forecastActions.setForecast(response.forecast.forecastday))
     };
     const [value, setValue] = useState('')

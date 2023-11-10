@@ -5,7 +5,6 @@ import { ConditionType } from './currentWeatherSlice';
 export interface ForecastDay {
     date: string,
     avgtemp_c: number | undefined,
-    night_temp: number | undefined,
     condition: ConditionType,
 }
 
@@ -24,7 +23,7 @@ export const forecastSlice = createSlice({
         setForecast: (state, action: PayloadAction<any[]>) => {
             state.forecastWeek = action.payload
             .map((day) => {
-                return { date: day.date, avgtemp_c: day.day.avgtemp_c, night_temp: day.day.night_temp, condition: day.day.condition }})
+                return { date: day.date, avgtemp_c: day.day.avgtemp_c, condition: day.day.condition }})
 
         },
     },
