@@ -19,7 +19,7 @@ const SearchBar: React.FC = () => {
         dispatch(forecastActions.setForecast(response.forecast.forecastday))
     };
     const [value, setValue] = useState('')
-    const onChangeHandler = (event:any) => {
+    const onChangeHandler = (event: any) => {
         setValue(event.target.value)
     }
 
@@ -29,3 +29,5 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
+
+

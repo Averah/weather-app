@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import cls from './WeatherLogo.module.scss';
-import WeatherText from '../../assets/logo/WeatherText5.png'
+import WeatherText from '../../assets/weatherLogo/WeatherText.png'
 
 interface WeatherLogoProps {
 }

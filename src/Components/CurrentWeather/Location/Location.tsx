@@ -10,7 +10,7 @@ export const Location: FC<LocationProps> = (props) => {
     const location = useSelector(getLocationState)
     return (
         <div className={cls.Location}>
-            <div>{location.name}</div>
+            <div className={cls.cityName}>{location.name}</div>
             <div>{location.region}</div>
             <div>{location.country}</div>
             <div>{`Local time: ${location.localtime}`}</div>

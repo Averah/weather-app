@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 
-import { getForecaseWeek } from '../../Store/Selectors/getForecastState';
+import { getForecastWeek } from '../../Store/Selectors/getForecastState';
 import cls from './Forecast.module.scss';
 import { ForecastDay } from './ForecastDay/ForecastDay';
 
@@ -9,7 +9,7 @@ interface ForecastProps {
 }
 
 export const Forecast: FC<ForecastProps> = (props) => {
-    const forecastWeek = useSelector(getForecaseWeek)
+    const forecastWeek = useSelector(getForecastWeek)
 
     return (
         <div className={cls.Forecast}>

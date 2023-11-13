@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { ConditionType } from './currentWeatherSlice';
+import { transformDate } from '../utilities/transformDate';
 
 export interface ForecastDay {
     date: string,
@@ -23,7 +24,7 @@ export const forecastSlice = createSlice({
         setForecast: (state, action: PayloadAction<any[]>) => {
             state.forecastWeek = action.payload
             .map((day) => {
-                return { date: day.date, avgtemp_c: day.day.avgtemp_c, condition: day.day.condition }})
+                return { date: transformDate(day.date), avgtemp_c: Math.round(day.day.avgtemp_c), condition: day.day.condition }})
 
         },
     },

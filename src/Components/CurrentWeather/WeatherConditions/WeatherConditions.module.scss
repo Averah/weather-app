@@ -1,13 +1,13 @@
 .WeatherConditions {
     display: flex;
-    
-
+    flex: 0 1 66%;
+    justify-content: space-around;
 }
 
-.condition {
-    width: 64px;
-    display: flex;
+.weatherIcon {
+    text-align: center;
 }
-.conditionText {
-    align-self: center;
+
+.temp {
+    font-weight: 600;
 }
