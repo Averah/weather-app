@@ -10,11 +10,11 @@ background: linear-gradient(90deg, rgba(203,226,222,1) 0%, rgba(154,166,222,1) 4
 }
 
 .content {
-
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  align-items: center;
+  width: 1200px;
   height: 700px;
   border: 4px solid rgba(255 255 255 / 13%);
   border-radius: 5%;
@@ -45,4 +45,20 @@ box-shadow: 1px 1px 8px 5px rgba(97, 144, 179, 0.2);
   margin: 0 auto;
   padding: 20px 20px;
 
+}
+
+.loader img {
+  animation-name: RotateLoader;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes RotateLoader {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
 }

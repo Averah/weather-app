@@ -25,7 +25,7 @@ export const currentWeatherSlice = createSlice({
     initialState,
     reducers: {
         setCurrentWeather: (state, action: PayloadAction<CurrentWeatherState>) => {
-            state.temp_c = action.payload.temp_c;
+            state.temp_c = action.payload.temp_c && Math.round(action.payload.temp_c);
             state.feelslike_c = action.payload.feelslike_c && Math.round(action.payload.feelslike_c);
             state.condition = action.payload.condition;
             state.humidity = action.payload.humidity;

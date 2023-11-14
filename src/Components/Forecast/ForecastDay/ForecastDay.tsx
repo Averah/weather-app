@@ -16,7 +16,7 @@ export const ForecastDay: FC<ForecastDayProps> = (props) => {
             <div>{date}</div>
             <div><img src={condition.icon} alt='weather icon' /></div>
             <div>{avgtemp_c}°C</div>
-            <div>{condition.text}</div>
+            <div className={cls.conditionText}>{condition.text}</div>
         </div>
     );
 };

@@ -7,7 +7,9 @@ export interface LocationState {
     localtime: string,
     region: string,
     name: string,
-    isDataReceived: boolean
+    isDataReceived: boolean,
+    isLoading: boolean,
+    error: string
 }
 
 const initialState: LocationState = {
@@ -15,7 +17,9 @@ const initialState: LocationState = {
     localtime: '',
     region: '',
     name: '',
-    isDataReceived: false
+    isDataReceived: false,
+    isLoading: false,
+    error: ''
 }
 
 export const locationSlice = createSlice({
@@ -29,8 +33,13 @@ export const locationSlice = createSlice({
             state.name = action.payload.name;
             state.isDataReceived = true
         },
+        setIsloading: (state, action: PayloadAction<boolean>) => {
+            state.isLoading = action.payload
+        },
+        setError: (state, action: PayloadAction<string>) => {
+            state.error = action.payload
     },
-})
+}})
 
 export const { actions: locationActions } = locationSlice;
 export const { reducer: locationReducer } = locationSlice;
