@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 
-import { getForecastWeek } from '../../Store/Selectors/getForecastState';
 import cls from './Forecast.module.scss';
 import { ForecastDay } from './ForecastDay/ForecastDay';
+import { getForecastWeek } from '../../../Store/Selectors/getForecastState';
 
 interface ForecastProps {
 }

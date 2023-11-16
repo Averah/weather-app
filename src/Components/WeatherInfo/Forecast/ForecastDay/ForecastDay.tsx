@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { ConditionType } from '../../../Store/currentWeatherSlice';
+import { ConditionType } from '../../../../Store/currentWeatherSlice';
+
 import cls from './ForecastDay.module.scss';
 
 interface ForecastDayProps {

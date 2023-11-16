@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import cls from './WeatherConditions.module.scss';
 import { useSelector } from 'react-redux';
-import { getCurrentWeatherState } from '../../../Store/Selectors/getCurrentWeatherState';
+import { getCurrentWeatherState } from '../../../../Store/Selectors/getCurrentWeatherState';
+
 
 interface WeatherConditionsProps {
     className?: string;

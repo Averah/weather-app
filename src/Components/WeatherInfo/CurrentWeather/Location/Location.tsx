@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import cls from './Location.module.scss';
 import { useSelector } from 'react-redux';
-import { getLocationState } from '../../../Store/Selectors/getLocationState';
+import { getLocationState } from '../../../../Store/Selectors/getLocationState';
+
 
 interface LocationProps {
 }

@@ -1,50 +1,33 @@
 import './App.scss';
-import { useSelector } from 'react-redux';
-import ghLogo from './assets/icons/footer/github-icon.svg';
-import { CurrentWeather } from './Components/CurrentWeather/CurrentWeather';
-import { Forecast } from './Components/Forecast/Forecast';
-import SearchBar from './Components/SearchBar/SearchBar';
-import { SplashPage } from './Components/SplashPage/SplashPage';
-import { WeatherLogo } from './Components/WeatherLogo/WeatherLogo';
-import { getIsDataReceived, getIsLoading } from './Store/Selectors/getLocationState';
 import classNames from 'classnames';
-
+import { useSelector } from 'react-redux';
+import { ContentWrapper } from './Components/ContentWrapper/ContentWrapper';
+import { Footer } from './Components/Footer/Footer';
+import { SplashPage } from './Components/SplashPage/SplashPage';
+import { WeatherInfo } from './Components/WeatherInfo/WeatherInfo';
+import { getIsDataReceived, getIsLoading } from './Store/Selectors/getLocationState';
 
 function App() {
   const isDataReceived = useSelector(getIsDataReceived);
   const isLoading = useSelector(getIsLoading);
 
-  if (isDataReceived) {
-    return (
-      <div className="App-layout">
-      <div className='content'>
-        <WeatherLogo />
-        <SearchBar />
-        <CurrentWeather />
-        <Forecast />
-      </div>
-      <div className='footer'>
-        <a href="https://github.com/Averah" target="_blank" rel="noopener noreferrer">
-          <img className='gh-logo' src={ghLogo} alt='' />
-        </a>
-      </div>
-    </div>
-    )
-    
-  } 
+  const content = isDataReceived ? (
+        <WeatherInfo />
+    ) 
+    : 
+    <SplashPage className={classNames('splashPage', isLoading && 'loader')} />
   
   return (
     <div className="App-layout">
       <div className='content'>
-        <WeatherLogo />
-        <SearchBar />
-        <SplashPage className={classNames('splashPage', isLoading && 'loader')} />
+      <ContentWrapper>
+        {content}
+      </ContentWrapper>
       </div>
       <div className='footer'>
-        <a href="https://github.com/Averah" target="_blank" rel="noopener noreferrer">
-          <img className='gh-logo' src={ghLogo} alt='' />
-        </a>
-      </div>
+        <Footer />
+        </div>
+      
     </div>
   );
 }

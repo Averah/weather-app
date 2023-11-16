@@ -2,14 +2,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 30px;
+
+    height: 100%
 
 }
 
-.splashText {
+.splashIcon {
+
+}
+
+.splashText, .error {
     font-weight: 600;
     font-style: italic;
     font-size: 20px;
+}
+
+.splashText {
     padding: 30px 0px
+}
+
+.error {
+
 }
