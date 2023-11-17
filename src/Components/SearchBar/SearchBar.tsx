@@ -1,25 +1,40 @@
-import { Input } from 'antd';
-import React, { useState } from 'react';
+import { AutoComplete, Input } from 'antd';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { fetchCities } from '../../Store/fetchCities';
 import { fetchWeather } from '../../Store/fetchWeather';
+import { AppDispatch } from '../../Store/store';
+import { debounce } from '../../utilities/debounce';
 import cls from './SearchBar.module.scss';
 
-const { Search } = Input;
-
 const SearchBar: React.FC = () => {
-    const dispatch = useDispatch()
 
-    const onSearch = async (value:string) => {
-        //@ts-ignore
+    const [value, setValue] = useState('')
+
+    const dispatch = useDispatch<AppDispatch>()
+    const onSearch = (value: string) => {
         dispatch(fetchWeather(value))
     };
-    const [value, setValue] = useState('')
+
     const onChangeHandler = (event: any) => {
         setValue(event.target.value)
     }
 
+    useEffect(() => {
+        const searchCities = () => {            
+            dispatch(fetchCities(value))
+        }
+        if (value) {
+            debounce(searchCities, 2000)
+        }
+
+    }, [value, dispatch])
+
     return (
-        <Search className={cls.searchBar} value={value} onChange={onChangeHandler} placeholder="Search the city" allowClear onSearch={onSearch} />
+        <AutoComplete className={cls.searchBar}>
+            <Input.Search className={cls.searchInput} value={value} onChange={onChangeHandler} placeholder="Search the city" allowClear onSearch={onSearch} />
+        </AutoComplete>
+
     )
 };
 

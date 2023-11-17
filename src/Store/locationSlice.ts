@@ -2,6 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 import { transformDateTime } from '../utilities/transformDate';
 import type { PayloadAction } from '@reduxjs/toolkit'
 
+export interface City {
+    name: string,
+    region: string,
+    country: string,
+}
+
 
 export interface LocationState {
     country: string,
@@ -10,7 +16,8 @@ export interface LocationState {
     name: string,
     isDataReceived: boolean,
     isLoading: boolean,
-    error?: string
+    error?: string,
+    cities: Array<City>
 }
 
 
@@ -22,7 +29,8 @@ const initialState: LocationState = {
     name: '',
     isDataReceived: false,
     isLoading: false,
-    error: ''
+    error: '',
+    cities: []
 }
 
 export const locationSlice = createSlice({
@@ -43,6 +51,9 @@ export const locationSlice = createSlice({
         },
         setError: (state, action: PayloadAction<string>) => {
             state.error = action.payload
+        },
+        setCities: (state, action: PayloadAction<Array<City>>) => {
+            state.cities = action.payload
     },
 }})
 

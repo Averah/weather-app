@@ -15,7 +15,7 @@ export const SplashPage: FC<SplashPageProps> = ({ className }) => {
 
     return (
         <div className={classNames(cls.SplashPage, className)}>
-            {error && <div className={cls.error}>{error}</div>}
+             <div className={cls.error}>{error}</div>
             <div className={cls.splashIcon}> <img src={SplashIcon} alt='splash icon' /></div>
             <div className={cls.splashText}>Find out the weather forecast of the cities across the world</div>
         </div>
