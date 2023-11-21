@@ -20,7 +20,6 @@ export const fetchWeather = createAsyncThunk(
         } catch (err) {
             if (axios.isAxiosError(err)) {
                 const error = err.response?.data.error.message
-                console.log(error);
                 dispatch(locationActions.setError(error))
             }
 

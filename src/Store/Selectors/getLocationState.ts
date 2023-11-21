@@ -6,3 +6,5 @@ export const getIsDataReceived = (state: StateSchema) => state.location.isDataRe
 export const getIsLoading = (state: StateSchema) => state.location.isLoading;
 
 export const getError = (state: StateSchema) => state.location.error
+
+export const getStateCities = (state: StateSchema) => state.location.cities
