@@ -8,28 +8,27 @@ import { WeatherInfo } from './Components/WeatherInfo/WeatherInfo';
 import { getIsDataReceived, getIsLoading } from './Store/Selectors/getLocationState';
 
 function App() {
-  const isDataReceived = useSelector(getIsDataReceived);
-  const isLoading = useSelector(getIsLoading);
+    const isDataReceived = useSelector(getIsDataReceived);
+    const isLoading = useSelector(getIsLoading);
 
-  const content = isDataReceived ? (
+    const content = isDataReceived ? (
         <WeatherInfo />
-    ) 
-    : 
-    <SplashPage className={classNames('splashPage', isLoading && 'loader')} />
-  
-  return (
-    <div className="App-layout">
-      <div className='content'>
-      <ContentWrapper>
-        {content}
-      </ContentWrapper>
-      </div>
-      <div className='footer'>
-        <Footer />
+    )
+        : <SplashPage className={classNames('splashPage', isLoading && 'loader')} />;
+
+    return (
+        <div className="App-layout">
+            <div className="content">
+                <ContentWrapper>
+                    {content}
+                </ContentWrapper>
+            </div>
+            <div className="footer">
+                <Footer />
+            </div>
+
         </div>
-      
-    </div>
-  );
+    );
 }
 
 export default App;

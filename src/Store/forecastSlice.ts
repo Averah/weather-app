@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 import { ConditionType } from './currentWeatherSlice';
 import { transformDate } from '../utilities/transformDate';
 
 export interface ForecastDay {
     date: string,
-    avgtemp_c: number | undefined,
+    avgtemp: number | undefined,
     condition: ConditionType,
 }
 
@@ -14,8 +14,8 @@ export interface ForecastState {
 }
 
 const initialState: ForecastState = {
-    forecastWeek: []
-}
+    forecastWeek: [],
+};
 
 export const forecastSlice = createSlice({
     name: 'forecast',
@@ -23,12 +23,15 @@ export const forecastSlice = createSlice({
     reducers: {
         setForecast: (state, action: PayloadAction<any[]>) => {
             state.forecastWeek = action.payload
-            .map((day) => {
-                return { date: transformDate(day.date), avgtemp_c: Math.round(day.day.avgtemp_c), condition: day.day.condition }})
-
+                .map((day) => (
+                    {
+                        date: transformDate(day.date),
+                        avgtemp: Math.round(day.day.avgtemp_c),
+                        condition: day.day.condition,
+                    }));
         },
     },
-})
+});
 
 export const { actions: forecastActions } = forecastSlice;
 export const { reducer: forecastReducer } = forecastSlice;

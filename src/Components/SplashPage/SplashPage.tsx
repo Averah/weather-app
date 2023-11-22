@@ -10,15 +10,16 @@ interface SplashPageProps {
   }
 
 export const SplashPage: FC<SplashPageProps> = ({ className }) => {
-
-    const error = useSelector(getError)
+    const error = useSelector(getError);
 
     return (
         <div className={classNames(cls.SplashPage, className)}>
-             <div className={cls.error}>{error}</div>
-            <div className={cls.splashIcon}> <img src={SplashIcon} alt='splash icon' /></div>
+            <div className={cls.error}>{error}</div>
+            <div className={cls.splashIcon}>
+                {' '}
+                <img src={SplashIcon} alt="splash icon" />
+            </div>
             <div className={cls.splashText}>Find out the weather forecast of the cities across the world</div>
         </div>
     );
 };
-

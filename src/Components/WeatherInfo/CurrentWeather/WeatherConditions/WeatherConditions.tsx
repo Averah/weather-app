@@ -1,16 +1,10 @@
 import React, { FC } from 'react';
-import cls from './WeatherConditions.module.scss';
 import { useSelector } from 'react-redux';
+import cls from './WeatherConditions.module.scss';
 import { getCurrentWeatherState } from '../../../../Store/Selectors/getCurrentWeatherState';
 
-
-interface WeatherConditionsProps {
-    className?: string;
-}
-
-export const WeatherConditions: FC<WeatherConditionsProps> = (props) => {
-
-    const currentWeather = useSelector(getCurrentWeatherState)
+export const WeatherConditions: FC = () => {
+    const currentWeather = useSelector(getCurrentWeatherState);
     return (
         <div className={cls.WeatherConditions}>
             <div className={cls.weatherData}>
@@ -20,9 +14,8 @@ export const WeatherConditions: FC<WeatherConditionsProps> = (props) => {
                 <div>{`Wind speed: ${currentWeather.humidity}kph`}</div>
             </div>
 
-
             <div className={cls.weatherIcon}>
-                <img src={currentWeather.condition.icon} alt='condition icon' />
+                <img src={currentWeather.condition.icon} alt="condition icon" />
                 <div className={cls.conditionText}>{currentWeather.condition.text}</div>
             </div>
         </div>

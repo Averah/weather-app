@@ -1,15 +1,13 @@
 .CurrentWeather {
     display: flex;
     align-items: center;
-    padding: 0px 30px;
+    padding: 0 30px;
     height: 150px;
     margin-top: 20px;
     border: 4px solid rgba(255 255 255 / 13%);
     border-radius: 15px;
     background: #f0f0f017;
-    -webkit-box-shadow: 1px 1px 8px 5px rgba(97, 144, 179, 0.2);
-    -moz-box-shadow: 1px 1px 8px 5px rgba(97, 144, 179, 0.2);
-    box-shadow: 1px 1px 8px 5px rgba(97, 144, 179, 0.2);
+    box-shadow: 1px 1px 8px 5px rgb(97 144 179 / 20%);
     background-image: url("../../../assets/weatherBackground/clouds.png");
     background-size: 650px;
     font-size: 18px;

@@ -9,7 +9,7 @@ interface ForecastProps {
 }
 
 export const Forecast: FC<ForecastProps> = (props) => {
-    const forecastWeek = useSelector(getForecastWeek)
+    const forecastWeek = useSelector(getForecastWeek);
 
     return (
         <div className={cls.Forecast}>
@@ -17,9 +17,14 @@ export const Forecast: FC<ForecastProps> = (props) => {
                 Forecast
             </div>
             {
-                forecastWeek.map((day) => {
-                    return <ForecastDay date={day.date} avgtemp_c={day.avgtemp_c} condition={day.condition} key={day.date} />
-                })
+                forecastWeek.map((day) => (
+                    <ForecastDay
+                        date={day.date}
+                        avgtemp={day.avgtemp}
+                        condition={day.condition}
+                        key={day.date}
+                    />
+                ))
             }
         </div>
     );

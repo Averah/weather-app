@@ -9,14 +9,12 @@ interface ContentWrapperProps {
     children: ReactNode;
 }
 
-export const ContentWrapper: FC<ContentWrapperProps> = ({ className, children }) => {
-    return (
-        <div className={classNames(cls.ContentWrapper, className)}>
-            <WeatherLogo />
-            <SearchBar />
-            <div className={cls.content}>
-                {children}
-            </div>
+export const ContentWrapper: FC<ContentWrapperProps> = ({ className, children }) => (
+    <div className={classNames(cls.ContentWrapper, className)}>
+        <WeatherLogo />
+        <SearchBar />
+        <div className={cls.content}>
+            {children}
         </div>
-    );
-};
+    </div>
+);

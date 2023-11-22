@@ -1,5 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+
+export type ConditionType = {
+    icon: string,
+    text: string
+}
 
 export interface CurrentWeatherState {
     temp_c: number | undefined,
@@ -14,11 +19,11 @@ const initialState: CurrentWeatherState = {
     feelslike_c: undefined,
     condition: {
         icon: '',
-        text: ''
+        text: '',
     },
     humidity: undefined,
-    wind_kph: undefined
-}
+    wind_kph: undefined,
+};
 
 export const currentWeatherSlice = createSlice({
     name: 'currentWeather',
@@ -32,12 +37,7 @@ export const currentWeatherSlice = createSlice({
             state.wind_kph = action.payload.wind_kph;
         },
     },
-})
+});
 
 export const { actions: currentWeatherActions } = currentWeatherSlice;
 export const { reducer: currentWeatherReducer } = currentWeatherSlice;
-
-export type ConditionType = {
-    icon: string,
-    text: string
-}

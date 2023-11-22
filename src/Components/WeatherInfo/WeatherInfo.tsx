@@ -6,11 +6,9 @@ interface WeatherInfoProps {
     className?: string;
 }
 
-export const WeatherInfo: FC<WeatherInfoProps> = ({ className }) => {
-    return (<div>
+export const WeatherInfo: FC<WeatherInfoProps> = ({ className }) => (
+    <div>
         <CurrentWeather />
         <Forecast />
     </div>
-    )
-
-};
+);
