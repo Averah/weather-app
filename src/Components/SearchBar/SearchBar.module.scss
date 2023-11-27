@@ -3,3 +3,13 @@
     padding: 20px 0;
     height: 70px;
 }
+
+.searchBar * {
+    font-family: Nunito, "Times New Roman", serif !important;
+}
+
+@media (max-width: 992px)  {
+    .searchBar {
+        padding: 10px 0;
+      }
+}

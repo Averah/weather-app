@@ -1,3 +1,13 @@
-.WeatherLogo img {
-    height: 60px;
+.WeatherLogo {
+    font-weight: 500;
+    padding: 15px;
+    color: #417893c9;
 }
+
+@media (max-width: 576px)  {
+    .WeatherLogo {
+        font-size: 13px;
+        padding: 5px;
+    }
+  }
+

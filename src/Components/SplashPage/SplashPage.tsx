@@ -19,7 +19,7 @@ export const SplashPage: FC<SplashPageProps> = ({ className }) => {
                 {' '}
                 <img src={SplashIcon} alt="splash icon" />
             </div>
-            <div className={cls.splashText}>Find out the weather forecast of the cities across the world</div>
+            <div className={cls.splashText}>Find out the weather forecast across the world</div>
         </div>
     );
 };

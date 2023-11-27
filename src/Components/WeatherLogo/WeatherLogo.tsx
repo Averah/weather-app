@@ -8,6 +8,7 @@ interface WeatherLogoProps {
 
 export const WeatherLogo: FC<WeatherLogoProps> = (props) => (
     <div className={classNames(cls.WeatherLogo)}>
-        <img src={WeatherText} alt="Weather forecast logo" />
+        <h2>Weather Forecast</h2>
+        {/* <img src={WeatherText} alt="Weather forecast logo" /> */}
     </div>
 );

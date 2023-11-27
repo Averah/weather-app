@@ -10,10 +10,51 @@
 .splashText, .error {
     font-weight: 600;
     font-style: italic;
-    font-size: 20px;
+    font-size: calc(15px + 4 * (100vw / 1100));
+    text-align: center;
 }
 
+.splashText {
+    padding-top: 15px;
+}
 
 .error {
     height: 30px;
 }
+
+
+@media (max-width: 992px)  {
+    .SplashPage img{
+        max-width: 250px;
+    }
+
+    .SplashPage {
+        justify-content: space-evenly;
+        height: 65%;
+    }
+
+
+  }
+
+
+  @media (max-width: 768px)  {
+    .SplashPage img{
+        max-width: 200px;
+    }
+
+    .SplashPage {
+        justify-content: space-evenly;
+        height: 55%;
+    }
+  }
+
+  @media (max-width: 400px)  {
+    .SplashPage img{
+        max-width: 150px;
+    }
+
+    .SplashPage {
+        justify-content: space-evenly;
+        height: 45%;
+    }
+  }

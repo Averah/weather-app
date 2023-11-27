@@ -13,7 +13,7 @@ export const Location: FC<LocationProps> = (props) => {
             <div className={cls.cityName}>{location.name}</div>
             <div>{location.region}</div>
             <div>{location.country}</div>
-            <div>{`Local time: ${location.localtime}`}</div>
+            <div>{location.localtime}</div>
         </div>
     );
 };
