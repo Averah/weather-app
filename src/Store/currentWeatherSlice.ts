@@ -12,6 +12,7 @@ export interface CurrentWeatherState {
     condition: ConditionType,
     humidity: number | undefined,
     wind_kph: number | undefined,
+    pressure_mb: number | undefined,
 }
 
 const initialState: CurrentWeatherState = {
@@ -23,6 +24,8 @@ const initialState: CurrentWeatherState = {
     },
     humidity: undefined,
     wind_kph: undefined,
+    pressure_mb: undefined,
+
 };
 
 export const currentWeatherSlice = createSlice({
@@ -35,6 +38,7 @@ export const currentWeatherSlice = createSlice({
             state.condition = action.payload.condition;
             state.humidity = action.payload.humidity;
             state.wind_kph = action.payload.wind_kph;
+            state.pressure_mb = action.payload.pressure_mb;
         },
     },
 });

@@ -2,9 +2,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
+    align-self: flex-start;
+    text-align: center;
 }
 
 .temp {
     font-weight: 600;
+}
+
+@media (max-width: 480px)  {
+    .TempCondition {
+        flex: 0 1 35%;
+    }
+    .TempCondition img {
+        max-width: 60px;
+    }
 }

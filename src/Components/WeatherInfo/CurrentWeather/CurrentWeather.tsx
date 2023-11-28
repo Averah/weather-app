@@ -4,7 +4,7 @@ import { Location } from './Location/Location';
 import { TempCondition } from './TempCondition/TempCondition';
 import { TemperatureData } from './TemperatureData/TemperatureData';
 
-export const CurrentWeather: FC = (props) => (
+export const CurrentWeather: FC = () => (
     <div className={cls.CurrentWeather}>
         <Location />
         <TempCondition />

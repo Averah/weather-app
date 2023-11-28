@@ -1,5 +1,15 @@
-
+.Location {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .cityName {
     font-weight: 600;
 }
 
+@media (max-width: 480px)  {
+    .Location {
+        flex: 0 1 30%;
+    }
+}

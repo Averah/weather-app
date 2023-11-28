@@ -25,6 +25,16 @@
         border-radius: none;
         background: none;
         box-shadow: none;
-
     }
 }
+
+@media (max-width: 480px)  {
+    .ContentWrapper {
+        padding: 0px;
+        border: none;
+        border-radius: none;
+        background: none;
+        box-shadow: none;
+    }
+}
+
