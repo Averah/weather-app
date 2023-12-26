@@ -1,6 +1,6 @@
 
 
-@media (max-width: 480px)  {
+@media (width <= 480px)  {
     .TemperatureData {
         flex: 0 1 35%;
     }

@@ -11,10 +11,11 @@
     font-weight: 600;
 }
 
-@media (max-width: 480px)  {
+@media (width <= 480px)  {
     .TempCondition {
         flex: 0 1 35%;
     }
+
     .TempCondition img {
         max-width: 60px;
     }

@@ -4,11 +4,12 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .cityName {
     font-weight: 600;
 }
 
-@media (max-width: 480px)  {
+@media (width <= 480px)  {
     .Location {
         flex: 0 1 30%;
     }

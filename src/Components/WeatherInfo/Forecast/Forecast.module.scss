@@ -15,11 +15,11 @@
     font-size: calc(14px + 4 * (100vw / 1100));
 }
 
-@media (max-width: 768px)  {
+@media (width <= 768px)  {
     .Forecast {
-      flex-direction: column;
-      padding-top: 5px;
-      }
+        flex-direction: column;
+        padding-top: 5px;
+    }
 
     .forecastLogo {
         padding: 10px;
@@ -27,7 +27,7 @@
 }
 
 
-@media (max-width: 480px)  {
+@media (width <= 480px)  {
     .Forecast {
         font-size: 13px
     }

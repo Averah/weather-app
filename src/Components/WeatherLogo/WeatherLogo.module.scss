@@ -1,13 +1,13 @@
 .WeatherLogo {
     font-weight: 500;
     padding: 15px;
-    color: #417893c9;
+    color: var(--secondary-color)
 }
 
-@media (max-width: 576px)  {
+@media (width <= 576px)  {
     .WeatherLogo {
         font-size: 13px;
         padding: 5px;
     }
-  }
+}
 

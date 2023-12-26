@@ -6,10 +6,12 @@ import { Footer } from './Components/Footer/Footer';
 import { SplashPage } from './Components/SplashPage/SplashPage';
 import { WeatherInfo } from './Components/WeatherInfo/WeatherInfo';
 import { getIsDataReceived, getIsLoading } from './Store/Selectors/getLocationState';
+import { useTheme } from './providers/ThemeProvider/useTheme';
 
 function App() {
     const isDataReceived = useSelector(getIsDataReceived);
     const isLoading = useSelector(getIsLoading);
+    const { theme } = useTheme();
 
     const content = isDataReceived ? (
         <WeatherInfo />
@@ -17,7 +19,7 @@ function App() {
         : <SplashPage className={classNames('splashPage', isLoading && 'loader')} />;
 
     return (
-        <div className="App-layout">
+        <div className={`App-layout ${theme}`}>
             <div className="content">
                 <ContentWrapper>
                     {content}

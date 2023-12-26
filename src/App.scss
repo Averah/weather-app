@@ -1,4 +1,8 @@
 @import 'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,1000;1,300;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap';
+@import "./providers/ThemeProvider/themes/light";
+@import "./providers/ThemeProvider/themes/dark";
+@import "./variables/global";
+
 
 .App-layout {
     font-family: Nunito, "Times New Roman", serif;
@@ -6,7 +10,7 @@
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(90deg, rgb(203 226 222 / 100%) 0%, rgb(154 166 222 / 100%) 41%, rgb(118 213 205 / 100%) 97%, rgb(113 196 185 / 100%) 100%);
+    background: var(--bg-color);
     flex-wrap: wrap;
 }
 
@@ -54,13 +58,13 @@
 }
 
   
-  @media (max-width: 768px)  {
+@media (width <= 768px)  {
     .content {
-      padding: 10px;
-      margin-top: 0px;
-      }
+        padding: 10px;
+        margin-top: 0;
+    }
 
     .footer img {
         max-height: 50px;
     }
-  }
+}

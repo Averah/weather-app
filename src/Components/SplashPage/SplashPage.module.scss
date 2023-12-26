@@ -16,6 +16,7 @@
 
 .splashText {
     padding-top: 15px;
+    color: var(--secondary-color)
 }
 
 .error {
@@ -23,7 +24,7 @@
 }
 
 
-@media (max-width: 992px)  {
+@media (width <= 992px)  {
     .SplashPage img{
         max-width: 250px;
     }
@@ -34,10 +35,10 @@
     }
 
 
-  }
+}
 
 
-  @media (max-width: 768px)  {
+@media (width <= 768px)  {
     .SplashPage img{
         max-width: 200px;
     }
@@ -46,9 +47,9 @@
         justify-content: space-evenly;
         height: 55%;
     }
-  }
+}
 
-  @media (max-width: 400px)  {
+@media (width <= 400px)  {
     .SplashPage img{
         max-width: 150px;
     }
@@ -57,4 +58,4 @@
         justify-content: space-evenly;
         height: 45%;
     }
-  }
+}
