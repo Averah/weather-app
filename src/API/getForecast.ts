@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-    baseURL: 'http://api.weatherapi.com/v1',
+    baseURL: 'https://api.weatherapi.com/v1',
 });
 
 export const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
