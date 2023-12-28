@@ -20,6 +20,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
             className={classNames(cls.themeSwitcher, className)}
         >
             <img src={theme === Theme.LIGHT ? DarkIcon : LightIcon} alt="splash icon" className={cls.themeImg} />
+            {theme === Theme.LIGHT ? <div>Dark</div> : <div>Light</div>}
         </button>
     );
 };

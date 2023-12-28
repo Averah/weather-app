@@ -7,6 +7,7 @@ import { SplashPage } from './Components/SplashPage/SplashPage';
 import { WeatherInfo } from './Components/WeatherInfo/WeatherInfo';
 import { getIsDataReceived, getIsLoading } from './Store/Selectors/getLocationState';
 import { useTheme } from './providers/ThemeProvider/useTheme';
+import { ThemeSwitcher } from './Components/ThemeSwitcher/ThemeSwitcher';
 
 function App() {
     const isDataReceived = useSelector(getIsDataReceived);

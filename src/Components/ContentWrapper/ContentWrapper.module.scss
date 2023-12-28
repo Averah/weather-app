@@ -20,18 +20,26 @@
 
 .themeSwitcher {
     position: absolute;
-    right: 5px;
+    left: 5px;
     top: 5px;
 }
 
-
-@media (width <= 768px)  {
+@media (width <= 930px)  {
     .ContentWrapper {
         padding: 10px;
         border: none;
         border-radius: none;
         background: none;
         box-shadow: none;
+    }
+
+    .themeSwitcher {
+        top: 1px;
+        left: 5px;
+    }
+
+    .themeSwitcher img {
+        max-width: 30px;
     }
 }
 
@@ -43,5 +51,17 @@
         background: none;
         box-shadow: none;
     }
+
+    .themeSwitcher {
+        max-width: 30px;
+        max-height: 30px;
+        top: 1px;
+        left: 5px;
+    }
+
+    .themeSwitcher img {
+        max-width: 25px;
+    }
 }
+
 
